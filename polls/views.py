@@ -10,9 +10,6 @@ from django.urls import reverse
 from django.views import generic
 from django.utils import timezone
 
-from django.http import Http404
-from django.shortcuts import render
-
 from .models import Question
 
 
