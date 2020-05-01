@@ -1,0 +1,24 @@
+{% extends 'polls/base.html' %}
+
+{% block content %}
+
+{% if request.user.is_authenticated %}
+    <p>
+        Hello, {{ request.user.username }}!
+    </p>
+{% endif %}
+
+<!-- ... EXISTING CONTENT GOES HERE ... -->
+
+<p align="right">
+    <a href="/accounts/login">Login</a>
+    <a href="/accounts/logout">Logout</a>
+    <a href="/registration/signup">Sign Up</a>
+  </p>
+  
+  {% block content %}
+  <p>
+      This is a placeholder block.
+  </p>
+
+  {% endblock %}
